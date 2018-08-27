@@ -4,6 +4,8 @@ ENV NB_USER jovyan
 ENV NB_UID 1000
 ENV HOME /home/${NB_USER}
 
+RUN rm -f ${HOME}/*.ipynb
+
 # Make sure the contents of our repo are in ${HOME}
 COPY . ${HOME}
 USER root
